@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.contenido-principal{
+    background-image: url("../img/panajachel2.jpg");
+    width: 100%;
+    height: 45rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.icono{
+    text-align: center;
+}
+
+.login{
+    background-color: steelblue;
+    opacity: 0.65;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+
+.div-usuario , .div-password{
+    margin-bottom: 2rem;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+}
+
+
+input{
+    width: 50%;
+    height: 1.75rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2.5px solid black;
+    font-weight: bold;
+}
+
+.contenedor-boton{
+    text-align: center;
+}
+
+.boton{
+    background-color: green;
+    width: 30%;
+    height: 2.2rem;
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+
+.link-crear-cuenta a{
+    font-size: 1.5rem;
+    color: black;
+    text-decoration:none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.link-crear-cuenta p{
+    color: black;
+    text-decoration:none;
+    font-weight: bold;
+}

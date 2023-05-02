@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.contenido-principal{
+    background-image: url("../../img/fondo-general.avif");
+    width: 100%;
+    height: 110rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.contenedor-regresar{
+    margin: 1rem;
+}
+
+.link-regresar{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenedor-solicitud{
+    display: flex;
+    justify-content: center;
+}
+
+.solicitud{
+    background-color: cornflowerblue;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 0.5cm;
+    color: darkblue;
+    font-weight: bold;
+}
+
+.solicitud div{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.solicitud p{
+    margin: 0;
+    margin-left: 2rem;
+}
+
+.solicitud label{
+    font-size: 1.25rem;
+}
+
+.aceptar{
+    background-color: green;
+}
+
+.rechazar{
+    background-color: red;
+}
+
+.aceptar , .rechazar{
+    color: white;
+    border: none;
+    width: 25%;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.contenido-principal{
+    background-image: url("../../img/fondo-general.avif");
+    width: 100%;
+    height: 50rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    background-size: 100% 100%;
+}
+
+.link-regresar{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.link-regresar a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+h1,h3{
+    color: white;
+    text-align: center;
+}
+
+.tabla{
+    background-color: #191970;
+    color: white;
+    margin: auto;
+    width: 75%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2.5px solid blue;
+    border-radius: 0.30cm;
+}
+
+.modificar{
+    color: skyblue;
+}
+
+.eliminar{
+    color: red;
+}
+
+.modificar , .eliminar {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    
+}

@@ -6,6 +6,8 @@ const trolleyController = require('../controllers/trolleyController');
 const trolleyDetailController = require("../controllers/trolleyDetailController");
 const requestController = require("../controllers/requestController");
 const revenueController = require("../controllers/revenueController");
+const reportsController = require("../controllers/reportsController");
+
 
 /* Aquí irán todas las peticiones iniciales a mis controladores,
 esta funcion se comunica con el server*/
@@ -18,6 +20,7 @@ const routes = function(server){
     server.use('/trolleyDetail',trolleyDetailController);
     server.use('/request',requestController);
     server.use('/revenue',revenueController);
+    server.use('/reports',reportsController);
 }
 
 module.exports = routes;

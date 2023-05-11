@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.contenido-principal{
+    background-image: url("../../img/fondo-general.avif");
+    width: 100%;
+    height: 45rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.contenedor-regresar{
+    margin: 1rem;
+}
+
+.link-regresar{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenedor-form{
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    border: 3px solid darkblue;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.boton{
+    width: 50%;
+    background-color: limegreen;
+    height: 1.75rem;
+    border: 3px solid darkgreen;
+    font-size: 1rem;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+

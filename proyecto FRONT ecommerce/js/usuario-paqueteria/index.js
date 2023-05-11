@@ -2,6 +2,7 @@ const linkSolicitudes = document.querySelector("#link-solicitudes");
 const linkPedidos = document.querySelector("#link-pedidos");
 const linkLogout = document.querySelector("#link-cerras-sesion");
 const nombreUsuario = document.querySelector("#nombre");
+const linkCategoria = document.querySelector("#link-categoria");
 
 //obtener query params
 const params = new URL(window.location.href).searchParams;
@@ -19,9 +20,14 @@ linkPedidos.addEventListener("click",()=>{
     window.location.href="http://127.0.0.1:5500/vistas/usuario-paqueteria/pedidos.html?dpi="+dpi;
 });
 
+linkCategoria.addEventListener('click',()=>{
+    window.location.href ="http://127.0.0.1:5500/vistas/usuario-paqueteria/ingresar-categoria.html?dpi="+dpi;
+});
+
 linkLogout.addEventListener('click',()=>{
     window.location.href="http://127.0.0.1:5500/index.html";
 });
+
 
 //mostrar usuario
 const request = new Request('http://localhost:3000/user/find/dpi/'+dpi);

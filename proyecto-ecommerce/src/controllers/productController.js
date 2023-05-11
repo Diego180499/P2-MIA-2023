@@ -16,6 +16,11 @@ router.get('/find/id/:id',async (req,res)=>{
     res.json(product);
 });
 
+router.get('/getBy/user/:dpi',async (req,res)=>{
+    const products = await productService.getByUser(req.params.dpi);
+    res.json(products);
+});
+
 //peticiones POST
 router.post('/add', (req,res)=>{
     const product = productService.addproduct(req.body);

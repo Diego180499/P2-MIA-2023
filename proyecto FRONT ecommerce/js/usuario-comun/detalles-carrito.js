@@ -3,6 +3,7 @@ const total = document.querySelector("#total");
 const linkRegresar = document.querySelector("#link-regresar");
 const botonPagar = document.querySelector("#boton-pagar");
 const linkTarjeta = document.querySelector("#link-tarjeta");
+const fechaPedido = document.querySelector("#fechaPedido");
 
 //obtener query params
 const params = new URL(window.location.href).searchParams;
@@ -88,7 +89,7 @@ function realizarPedido(){
         id:0,
         usuario:dpi,
         carrito:idCarritoNuevo,
-        fecha_pedido:"0",
+        fecha_pedido:fechaPedido.value,
         fecha_entrega:"0",
         ganancia:0
     }

@@ -90,17 +90,14 @@ modificarFechaEntrega();
 function modificarFechaEntrega(){
     form.addEventListener("submit",(e)=>{
         e.preventDefault();
-        console.log(fechaEntrega.value);
-        const fechaNueva = new Date(fechaEntrega.value);
-        fechaNueva.setDate((fechaNueva.getDate()+1));
-        solicitudModificar(fechaNueva.toLocaleDateString());
+        solicitudModificar();
     });
 }
 
-function solicitudModificar(fecha){
+function solicitudModificar(){
     const bodyRequest = {
         idPedido:idPedido,
-        fecha_entrega:fecha
+        fecha_entrega:fechaEntrega.value
     }
 
     const request = new Request("http://localhost:3000/request/modify/deliverDate",{

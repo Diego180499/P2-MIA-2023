@@ -1,5 +1,6 @@
 const linkIngresarEmpleado = document.querySelector("#link-ingresar-empleado");
 const linkEmpleados = document.querySelector("#link-empleados");
+const linkReportes = document.querySelector("#link-reportes");
 const linkLogout = document.querySelector("#link-cerras-sesion");
 const nombreUsuario = document.querySelector("#nombre-usuario");
 
@@ -33,6 +34,10 @@ linkIngresarEmpleado.addEventListener('click',()=>{
 
 linkEmpleados.addEventListener("click",()=>{
     window.location.href= "http://127.0.0.1:5500/vistas/usuario-admin/empleados.html?dpi="+dpi;
+});
+
+linkReportes.addEventListener("click",()=>{
+    window.location.href= "http://127.0.0.1:5500/vistas/usuario-admin/reportes.html?dpi="+dpi;
 });
 
 linkLogout.addEventListener('click',()=>{

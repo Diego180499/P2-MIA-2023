@@ -15,7 +15,7 @@ linkRegresar.addEventListener('click',()=>{
 peticionEmpleados();
 
 function peticionEmpleados(){
-    const request = new Request("http://localhost:3000/user/getAll");
+    const request = new Request("http://localhost:3000/user/find/employees");
     fetch(request)
         .then(res => res.json())
         .then(response =>{
@@ -44,8 +44,9 @@ function mostrarEmpleados(usuarios){
             <td>${usuarios[i].usuario}</td>
             <td>${usuarios[i].password}</td>
             <td>${mostrarTipoUsuario(usuarios[i].tipo_usuario)}</td>
-            <td><a href="#" class="modificar" id="modificar">Modificar</a></td>
-            <td><a href="#" class="eliminar" id="eliminar">Eliminar</a></td>
+            <td>
+            <a href="http://127.0.0.1:5500/vistas/usuario-admin/modificar-empleado.html?dpi=${dpi}&id=${usuarios[i].dpi}" class="modificar" id="modificar">
+            Modificar</a></td>            
         </tr>`;
     }
     return contenido;

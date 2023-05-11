@@ -62,6 +62,32 @@ linkRegresar.addEventListener("click",()=>{
 });
 
 
+//llenar el select de categoria de productos
+obtenerCategorias();
+function obtenerCategorias(){
+    const request = new Request("http://localhost:3000/productCategory/getAll");
+
+    fetch(request)
+        .then(res => res.json())
+        .then(response => {
+            console.log(response);
+            const contenido = llenarSelect(response);
+            categoria.innerHTML = contenido;
+        });
+}
+
+function llenarSelect(categorias){
+    let contenido = ``;
+    
+    for(let i=0; i<categorias.length; i++){
+        contenido += `<option value="${categorias[i].nombre}">
+        ${categorias[i].nombre}
+        </option>`;
+    }
+
+    return contenido;
+}
+
 function alerta(mensaje){
     swal(mensaje,'','success');
 }

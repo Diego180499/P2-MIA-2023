@@ -9,6 +9,7 @@ app.use(router);
 //peticiones GET
 router.get('/getAll',async (req,res)=>{
     const users = await userService.getAll();
+    console.log(req.query.nombre);
     res.json(users);
 });
 
@@ -36,7 +37,10 @@ router.get('/hasCard/:dpi',async (req,res)=>{
     });
 });
 
-
+router.get('/find/employees',async (req,res)=>{
+     const employees = await userService.getEmployeeUsers();
+     res.json(employees);
+});
 
 //peticiones POST
 router.post('/login',async (req,res)=>{

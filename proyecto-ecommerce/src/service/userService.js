@@ -95,6 +95,12 @@ async function increaseCardAmount(dpi,amount){
     await usuario.save();
 }
 
+//obtener usuarios empleados
+async function getEmployeeUsers(){
+    const employess = await User.find({$or:[{tipo_usuario:2},{tipo_usuario:1}]});
+    return employess;
+}
+
 
 module.exports ={
     addUser,
@@ -107,5 +113,6 @@ module.exports ={
     saveCard,
     getCardAmount,
     substractCardAmount,
-    increaseCardAmount
+    increaseCardAmount,
+    getEmployeeUsers
 }

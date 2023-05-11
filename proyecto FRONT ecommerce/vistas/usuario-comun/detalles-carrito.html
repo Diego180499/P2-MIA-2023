@@ -9,19 +9,25 @@
 </head>
 <body>
     <div class="contenido-principal">
+        <div class="contenedor-regresar">
+            <a href="#" id="link-regresar" class="link-regresar">Regresar</a>
+        </div>
         <h1>Detalles de Carrito</h1>
         <div class="registrar-tarjeta">
             <h3>¿No has ingresado tu Tarjeta de Crédito? - </h3>
             <a href="#" id="link-tarjeta">Regístrala</a>
         </div>
         <div class="contenedor-tabla">
-            <div class="contenedor-regresar">
-                <a href="#" id="link-regresar" class="link-regresar">Regresar</a>
-            </div>
             <table class="tabla" id="tabla">
     
             </table>
             <h1 class="total" id="total"></h1>
+        </div>
+        <div class="fecha">
+            <div class="div">
+                <label for="fecha">Fecha de Pedido</label>
+                <input type="date" id="fechaPedido">                
+            </div>
         </div>
         <div class="contenedor-boton">
             <button class="boton-pagar" id="boton-pagar">Realizar Pedido</button>

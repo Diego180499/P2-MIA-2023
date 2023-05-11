@@ -22,8 +22,9 @@ async function addRequest(request){
     const idRequest = utilities.getRandomInt();
     request.id = idRequest;
     request.estado = 0;
-    request.fecha_pedido = utilities.getActualDate();
-    request.fecha_entrega = utilities.getFutureDate(5);
+    const fechaPedido = utilities.stringToLocalDate(request.fecha_pedido);
+    request.fecha_pedido = fechaPedido;
+    request.fecha_entrega = utilities.getFutureDate(fechaPedido,5);
     request.ganancia = total*0.05;
     const newRequest = new Request(request);
     newRequest.save();
@@ -114,7 +115,8 @@ async function deleteRequest(id){
 
 async function modifyDeliverDate(idPedido,date){
     const foundRequest = await Request.findOne({id:idPedido});
-    foundRequest.fecha_entrega = date;
+    console.log(date);
+    foundRequest.fecha_entrega = utilities.stringToLocalDate(date);
     console.log(foundRequest);
     const newRequest = await foundRequest.save();
     return newRequest;

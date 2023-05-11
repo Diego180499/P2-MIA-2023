@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/usuario-admin/ingresar-empleado.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenido-principal">
+        <div class="link-regresar">
+            <a href="#" id="link-regresar">Regresar</a>
+        </div>
+
+        <form class="formulario" id="form">
+            <h1>Datos personales</h1>
+
+            <div class="div">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text">
+            </div>
+            <div class="div">
+                <label for="apellido">Apellido</label>
+                <input id="apellido" type="text">
+            </div>
+            <div class="div">
+                <label for="dpi">DPI</label>
+                <input id="dpi" type="text" disabled>
+            </div>
+            <div class="div">
+                <label for="usuario">Usuario</label>
+                <input id="usuario" type="text">
+            </div>
+            <div class="div">
+                <label for="password">Contraseña</label>
+                <input id="password" type="text">
+            </div>
+            <div class="div">
+                <label for="tipo-usuario">Tipo de Usuario</label>
+                <select id="tipo-usuario" class="tipo-usuario">
+                    <option value="1">Administrador</option>
+                    <option value="2">Paqueteria</option>
+                </select>
+            </div>
+
+            <div class="div">
+                <button type="submit" id="boton" class="boton">Modificar</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="../../js/usuario-admin/modificarEmpleado.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>

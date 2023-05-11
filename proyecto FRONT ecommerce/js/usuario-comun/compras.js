@@ -58,8 +58,7 @@ async function obtenerProductos(){
             console.log(response);
             contenido = mostrarProductos(response);           
         });
-    contenedorProductos.innerHTML = contenido;
-    
+    contenedorProductos.innerHTML = contenido;   
 }
 
 

@@ -1,7 +1,7 @@
 const Product = require("../repository/productModel");
 
 function addproduct(product){
-    const newProduct = new Product(product);
+    const newProduct = new Product(product);    
     newProduct.save();
     return newProduct;
 }
@@ -30,6 +30,10 @@ async function deleteProduct(id){
     await Product.deleteOne({id:id});
 }
 
+async function getByUser(dpi){
+    const products = await Product.find({usuario:dpi});
+    return products;
+}
 
 //generar numero random para el id de un producto
 function getRandomInt() {
@@ -41,5 +45,6 @@ module.exports = {
     getAll,
     getBiId,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    getByUser
 }

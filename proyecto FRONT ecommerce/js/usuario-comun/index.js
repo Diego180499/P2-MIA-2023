@@ -2,6 +2,9 @@ const linkVender = document.querySelector("#link-vender");
 const linkLogout = document.querySelector("#link-cerras-sesion");
 const linkCarrito = document.querySelector("#link-carrito");
 const linkPedidos = document.querySelector("#link-pedidos");
+const linkPerfil = document.querySelector("#perfil");
+const linkProductos = document.querySelector("#link-productos");
+
 const nombreUsuario = document.querySelector("#nombre-usuario");
 
 //obtener query params
@@ -27,7 +30,16 @@ linkPedidos.addEventListener('click',()=>{
     window.location.href="http://127.0.0.1:5500/vistas/usuario-comun/pedidos.html?dpi="+dpi;
 });
 
+linkPerfil.addEventListener('click',()=>{
+    window.location.href="http://127.0.0.1:5500/vistas/usuario-comun/perfil.html?dpi="+dpi;
+});
 
+linkProductos.addEventListener("click",()=>{
+    window.location.href="http://127.0.0.1:5500/vistas/usuario-comun/mis-productos.html?dpi="+dpi; 
+});
+
+
+//*******/
 const request = new Request('http://localhost:3000/user/find/dpi/'+dpi);
 fetch(request)
     .then(res => res.json())

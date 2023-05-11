@@ -102,7 +102,7 @@ function mostrarSolicitud(solicitud){
         </div>
         <div>
             <label>Precio</label>
-            <p>Q.${solicitud.producto.usuario}</p>
+            <p>Q.${solicitud.producto.precio}</p>
         </div>
         <button class="aceptar" id="aceptar">Aceptar</button>
         <button class="rechazar" id="rechazar">Rechazar</button>

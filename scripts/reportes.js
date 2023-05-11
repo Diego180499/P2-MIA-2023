@@ -12,7 +12,6 @@ db.detalle_carritos.aggregate(
 )
 
 2.
-
 db.pedidos.aggregate([
     {
         $group:{
@@ -43,6 +42,17 @@ db.pedidos.aggregate(
         },
         {
             $sort:{gananciasGeneradas : -1}
+        }
+    ]
+)
+
+5.
+db.productos.aggregate(
+    [
+        {
+            $group : {_id:"$usuario",
+            productos : {$sum : 1 }}},
+            {$limit:10},{$sort:{productos : -1}
         }
     ]
 )
